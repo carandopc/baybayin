@@ -14,10 +14,10 @@ body {
 main {
 	width: 90vw;
 	flex-grow: 1;
-	vertical-align: middle;
+	display: flex;
+	align-items: center;
 }
 p {
-	height: 100%;
 	margin: 1rem;
 	font-size: 3rem;
 }
