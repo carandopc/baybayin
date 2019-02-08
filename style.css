@@ -1,3 +1,33 @@
+* {
+	margin: 0;
+}
+html {
+	font-size: 24px;
+}
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+} 
+main {
+	width: 90vw;
+	flex-grow: 1;
+	vertical-align: middle;
+}
 p {
-	font-size: 32px;
+	height: 100%;
+	margin: 1rem;
+	font-size: 3rem;
+}
+footer {
+	width: 90vw;
+	padding: 1rem;
+}
+input {
+	width: 100%;
+	font-size: 2rem;
+	border: 0;
+	border-bottom: 1px solid black;
 }

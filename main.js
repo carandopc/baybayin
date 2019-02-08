@@ -1,8 +1,14 @@
-function check() {
-	let text = document.getElementById('text').value;
-	let result = document.getElementById('result');
 
+window.onload = function() {
+	document.getElementById('text').addEventListener('input', function() {
+		translate(this.value);
+	});
+};
+
+
+function translate(text) {
 	if (text != null) {
+		text = text.toLowerCase();
 		text = text.replace(/c|q/g, 'k');
 		text = text.replace(/f/g, 'p');
 		text = text.replace(/i/g, 'e');
@@ -12,9 +18,6 @@ function check() {
 		text = text.replace(/v/g, 'b');
 		text = text.replace(/x|z/g, 's');
 
-		var patinig = 'aeo';
-		var katinig = 'bkdghlmn+prstwy';
-
 		let count = 0;
 		let output = '';
 
@@ -22,12 +25,12 @@ function check() {
 			let part = text.charAt(count);
 			let next = text.charAt(count + 1);
 
-			if (patinig.indexOf(part) > -1) {
+			if (pMap.has(part)) {
 				output += pMap.get(part);
-			} else if (katinig.indexOf(part) > -1) {
+			} else if (kMap.has(part)) {
 				output += kMap.get(part);
 
-				if (next != '' && patinig.indexOf(next) > -1) {
+				if (pMap.has(next)) {
 					output += uMap.get(next);
 					count++;
 				} else {
@@ -40,7 +43,7 @@ function check() {
 			count++;
 		}
 
-		result.innerHTML = output;
+		document.getElementById('result').innerHTML = output;
 	}
 
 	return false;
