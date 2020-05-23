@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-        <title>Baybayin</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <main>
-            <p id='result'></p>
-        </main>
-        <footer>
-            <input type='text' name='text' id='text' autofocus>
-        </footer>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baybayin</title>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container p-3">
+    <h3>Baybayin Translator</h3>
+
+    <form action="">
+      <div class="form-row my-3">
+        <div class="col-md-12 mb-3">
+          <label for="input">Tagalog</label>
+          <input type="text" class="form-control" id="input" autofocus>
+        </div>
+    
+        <div class="col-md-12 mb-3">
+          <label for="output">Baybayin</label>
+          <p id="output" class="text-baybayin mb-0"></p>
+          <small class="form-text text-muted">Click to copy</small>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
 </html>
