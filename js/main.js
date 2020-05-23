@@ -22,7 +22,7 @@ trim = (input) => {
   if (input == null) {
     input = "";
   } else {
-    input = input.trim();
+    input = input.trim().toLowerCase();
   }
 
   return input;
