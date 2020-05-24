@@ -29,8 +29,8 @@ trim = (input) => {
 }
 
 replace = (input) => {
-  // ALLOW ONLY ALPHANUMERIC, PERIOD, AND COMMA
-  input = input.replace(/[^A-Za-z0-9., ]/g, "");
+  // ALLOW ONLY LETTERS, PERIOD, AND COMMA
+  input = input.replace(/[^A-Za-z., ]/g, "");
   // COMBINE VOWELS
   input = input.replace(/e/g, "i");
   input = input.replace(/u/g, "o");
